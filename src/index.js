@@ -44,15 +44,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 /* chapter3-2-1 */
-// root.render(
-//     <React.StrictMode>
-//         <ForList src={books} />
-//     </React.StrictMode>
-// )
-
-/* cahpter3-2-7 */
 root.render(
     <React.StrictMode>
-        <ForNest src={books} />
+        <ForList src={books} />
     </React.StrictMode>
 )
+
+/* cahpter3-2-7 */
+// root.render(
+//     <React.StrictMode>
+//         <ForNest src={books} />
+//     </React.StrictMode>
+// )
