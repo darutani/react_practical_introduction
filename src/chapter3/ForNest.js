@@ -1,0 +1,14 @@
+import React from "react";
+import {ForItem} from "./ForItem";
+
+export function ForNest({ src }) {
+    return (
+        <dl>
+            {
+                src.map(elem => (
+                    <ForItem book={elem} key={elem.isbn} />
+                ))
+            }
+        </dl>
+    );
+}
