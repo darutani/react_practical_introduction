@@ -10,6 +10,7 @@ import {StateBasic} from "./chapter3/StateBasic";
 import {ForList} from "./chapter3/ForList";
 import {books} from "./chapter3/books";
 import {ForNest} from "./chapter3/ForNest";
+import SelectStyle from "./chapter3/SelectStyle";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -51,8 +52,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* cahpter3-2-7 */
+// root.render(
+//     <React.StrictMode>
+//         <ForNest src={books} />
+//     </React.StrictMode>
+// )
+
+/* chapter3-2-18 */
 root.render(
     <React.StrictMode>
-        <ForNest src={books} />
+        <SelectStyle mode='light' />
     </React.StrictMode>
 )
