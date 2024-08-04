@@ -16,6 +16,32 @@ import TitledPanel from "./chapter3/TitledPanel"
 import ListTemplate from "./chapter3/ListTemplate";
 import MyHello from "./chapter3/MyHello";
 import {StateParent} from "./chapter3/StateParent";
+import EventMouse from "./chapter3/EventMouse";
+import EventCompare from "./chapter3/EventCompare";
+import EventError from "./chapter3/EventError";
+import EventObj from "./chapter3/EventObj";
+import EventPoint from "./chapter3/EventPoint";
+import EventKey from "./chapter3/EventKey";
+import EventArgs from "./chapter3/EventArgs";
+import EventArgs2 from "./chapter3/EventArgs2";
+import EventPropagation from "./chapter3/EventPropagation";
+import EventOnce from "./chapter3/EventOnce";
+import EventPassive from "./chapter3/EventPassive";
+
+// chapter4
+import StateForm from "./chapter4/StateForm";
+import StateFormUc from "./chapter4/StateFormUc";
+import FormTextarea from "./chapter4/FormTextarea";
+import FormSelect from "./chapter4/FormSelect";
+import FormList from "./chapter4/FormList";
+import FormRadio from "./chapter4/FormRadio";
+import FormCheck from "./chapter4/FormCheck";
+import FormCheckMulti from "./chapter4/FormCheckMulti";
+import FormFile from "./chapter4/FormFile";
+import StateNest from "./chapter4/StateNest";
+import StateNestImmer from "./chapter4/StateNestImmer";
+import StateNestImmer2 from "./chapter4/StateNestImmer2";
+import StateTodo from "./chapter4/StateTodo";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -149,8 +175,179 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 3-3-31 */
+// root.render(
+//     <React.StrictMode>
+//         <StateParent />
+//     </React.StrictMode>
+// )
+
+
+/* 3-4-2 */
+// root.render(
+//     <React.StrictMode>
+//         <EventMouse
+//             alt='ロゴ画像'
+//             beforeSrc="https://www.web-deli.com/image/linkbanner_l.gif"
+//             afterSrc="https://www.web-deli.com/image/home_chara.gif"
+//         />
+//     </React.StrictMode>
+// )
+
+/* 3-4-5 */
+// root.render(
+//     <EventCompare />
+// )
+
+/* 3-4-7 */
+// root.render(
+//     <React.StrictMode>
+//         <EventError src='./image/wings.jpg' alt="サンプル画像" />
+//     </React.StrictMode>
+// )
+
+/* 3-4-9 */
+// root.render(
+//     <React.StrictMode>
+//         <EventObj />
+//     </React.StrictMode>
+// )
+
+/* 3-4-12 */
+// root.render(
+//     <React.StrictMode>
+//         <EventPoint />
+//     </React.StrictMode>
+// )
+
+/* 3-4-14 */
+// root.render(
+//     <React.StrictMode>
+//         <EventKey />
+//     </React.StrictMode>
+// )
+
+/* 3-4-16 */
+// root.render(
+//     <React.StrictMode>
+//         <EventArgs />
+//     </React.StrictMode>
+// )
+
+/* 3-4-18 */
+// root.render(
+//     <React.StrictMode>
+//         <EventArgs2 />
+//     </React.StrictMode>
+// )
+
+/* 3-4-21 */
+// root.render(
+//     <React.StrictMode>
+//         <EventPropagation />
+//     </React.StrictMode>
+// )
+
+/* 3-4-23 */
+// root.render(
+//     <React.StrictMode>
+//         <EventOnce />
+//     </React.StrictMode>
+// )
+
+/* 3-4-23 */
+// root.render(
+//     <React.StrictMode>
+//         <EventPassive />
+//     </React.StrictMode>
+// )
+
+/* 4-1-2 */
+// root.render(
+//     <React.StrictMode>
+//         <StateForm />
+//     </React.StrictMode>
+// )
+
+/* 4-1-2 */
+// root.render(
+//     <React.StrictMode>
+//         <StateFormUc />
+//     </React.StrictMode>
+// )
+
+/* 4-1-6 */
+// root.render(
+//     <React.StrictMode>
+//         <FormTextarea />
+//     </React.StrictMode>
+// )
+
+/* 4-1-8 */
+// root.render(
+//     <React.StrictMode>
+//         <FormSelect />
+//     </React.StrictMode>
+// )
+
+/* 4-1-10 */
+// root.render(
+//     <React.StrictMode>
+//         <FormList />
+//     </React.StrictMode>
+// )
+
+/* 4-1-12 */
+// root.render(
+//     <React.StrictMode>
+//         <FormRadio />
+//     </React.StrictMode>
+// )
+
+/* 4-1-12 */
+// root.render(
+//     <React.StrictMode>
+//         <FormCheck />
+//     </React.StrictMode>
+// )
+
+/* 4-1-14 */
+// root.render(
+//     <React.StrictMode>
+//         <FormCheckMulti />
+//     </React.StrictMode>
+// )
+
+/* 4-1-16 */
+// root.render(
+//     <React.StrictMode>
+//         <FormFile />
+//     </React.StrictMode>
+// )
+
+/* 4-2-2 */
+// root.render(
+//     <React.StrictMode>
+//         <StateNest />
+//     </React.StrictMode>
+// )
+
+/* 4-2-2 */
+// root.render(
+//     <React.StrictMode>
+//         <StateNestImmer />
+//     </React.StrictMode>
+// )
+
+/* 4-2-2 */
+// root.render(
+//     <React.StrictMode>
+//         <StateNestImmer2 />
+//     </React.StrictMode>
+// )
+
+/* 4-2-2 */
 root.render(
     <React.StrictMode>
-        <StateParent />
+        <StateTodo />
     </React.StrictMode>
 )
