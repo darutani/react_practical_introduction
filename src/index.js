@@ -42,6 +42,7 @@ import StateNest from "./chapter4/StateNest";
 import StateNestImmer from "./chapter4/StateNestImmer";
 import StateNestImmer2 from "./chapter4/StateNestImmer2";
 import StateTodo from "./chapter4/StateTodo";
+import FormBasic from "./chapter4/FormBasic";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -346,8 +347,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 4-2-2 */
+// root.render(
+//     <React.StrictMode>
+//         <StateTodo />
+//     </React.StrictMode>
+// )
+
+/* 4-3-2 */
 root.render(
     <React.StrictMode>
-        <StateTodo />
+        <FormBasic />
     </React.StrictMode>
 )
