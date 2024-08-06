@@ -1,9 +1,9 @@
 import {useForm} from "react-hook-form";
-import {yupResolver} from "@hookform/resolvers/yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from 'yup';
 
 export default function FormBasic() {
-    const shema = yup.object({
+    const schema = yup.object({
         name: yup
             .string()
             .label('名前')
@@ -22,7 +22,19 @@ export default function FormBasic() {
             .string()
             .label('備考')
             .required('${label}は必須入力です。')
-            .min(10, '${label}は${min}文字以上で入力してください。'),
+            .min(10, '${label}は${min}文字以上で入力してください。')
+            .test('ng',
+                ({ label }) => `${label}にNGワードが含まれています。`,
+                value => {
+                    const ngs = ['暴力', '死', 'グロ'];
+                    for (const ng of ngs) {
+                        if (value.includes(ng)) {
+                            return '備考にNGワードが含まれています。';
+                        }
+                    }
+                    return true;
+                }
+            ),
     })
 
     const defaultValues = {
@@ -37,7 +49,7 @@ export default function FormBasic() {
         formState: { errors, isDirty, isValid, isSubmitting }
     } = useForm({
         defaultValues,
-        resolver: yupResolver(shema),
+        resolver: yupResolver(schema),
     });
     const onsubmit = data => {
         return new Promise(resolve => {
