@@ -2,12 +2,14 @@ import {useForm} from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from 'yup';
 
-export default function FormBasic() {
+export default function FormYup() {
     const schema = yup.object({
         name: yup
             .string()
             .label('名前')
-            .required('${label}は必須入力です。')
+            .transform((value, orgValue) => value.normalize('NFKC'))
+            // .required('${label}は必須入力です。')
+            .trim().lowercase()
             .max(20, '${label}は${max}文字以内で入力してください。'),
         gender: yup
             .string()
@@ -46,19 +48,12 @@ export default function FormBasic() {
 
     const { register,
         handleSubmit,
-        formState: { errors, isDirty, isValid, isSubmitting }
+        formState: { errors, isDirty, isValid }
     } = useForm({
         defaultValues,
         resolver: yupResolver(schema),
     });
-    const onsubmit = data => {
-        return new Promise(resolve => {
-            setTimeout(() => {
-                resolve();
-                console.log(data);
-            }, 4000);
-        });
-    };
+    const onsubmit = data => console.log(data);
     const onerror = err => console.log(err);
 
     return (
@@ -99,8 +94,7 @@ export default function FormBasic() {
                 <div>{errors.memo?.message}</div>
             </div>
             <div>
-                <button type="submit" disabled={! isDirty || ! isValid || isSubmitting}>送信</button>
-                {isSubmitting && <div>...送信中...</div>}
+                <button type="submit" disabled={! isDirty || ! isValid}>送信</button>
             </div>
         </form>
     );
