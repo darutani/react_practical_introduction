@@ -44,6 +44,7 @@ import StateNestImmer2 from "./chapter4/StateNestImmer2";
 import StateTodo from "./chapter4/StateTodo";
 import FormBasic from "./chapter4/FormBasic";
 import FormYup from "./chapter4/Formyup";
+import FormJapan from "./chapter4/FormJapan";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -362,8 +363,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 4-3-7 */
+// root.render(
+//     <React.StrictMode>
+//         <FormYup />
+//     </React.StrictMode>
+// )
+
+/* 4-3-14 */
 root.render(
     <React.StrictMode>
-        <FormYup />
+        <FormJapan />
     </React.StrictMode>
 )
