@@ -45,6 +45,9 @@ import StateTodo from "./chapter4/StateTodo";
 import FormBasic from "./chapter4/FormBasic";
 import FormYup from "./chapter4/Formyup";
 import FormJapan from "./chapter4/FormJapan";
+import LazyBasic from "./chapter5/LazyBasic";
+import SuspenseSimple from "./chapter5/SuspenseSimple";
+import SuspenseResult from "./chapter5/SuspenseResult";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -370,8 +373,29 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 4-3-14 */
+// root.render(
+//     <React.StrictMode>
+//         <FormJapan />
+//     </React.StrictMode>
+// )
+
+/* 5-1-2 */
+// root.render(
+//     <React.StrictMode>
+//         <LazyBasic />
+//     </React.StrictMode>
+// )
+
+/* 5-1-7 */
+// root.render(
+//     <React.StrictMode>
+//         <SuspenseSimple />
+//     </React.StrictMode>
+// )
+
+/* 5-1-12 */
 root.render(
     <React.StrictMode>
-        <FormJapan />
+        <SuspenseResult />
     </React.StrictMode>
 )
