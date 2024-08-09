@@ -49,6 +49,9 @@ import LazyBasic from "./chapter5/LazyBasic";
 import SuspenseSimple from "./chapter5/SuspenseSimple";
 import SuspenseResult from "./chapter5/SuspenseResult";
 import ProfileBasic from "./chapter5/ProfileBasic";
+import StyledBasic from "./chapter5/StyledBasic";
+import StyledCss from "./chapter5/StyledCss";
+import StyledDynamic from "./chapter5/StyledDynamic";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -402,8 +405,34 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 5-1-15 */
+// root.render(
+//     <React.StrictMode>
+//         <ProfileBasic />
+//     </React.StrictMode>
+// )
+
+/* 5-2-5 */
+// root.render(
+//     <React.StrictMode>
+//         <h3>Styled JSXの基本</h3>
+//         <StyledBasic />
+//     </React.StrictMode>
+// )
+
+/* 5-2-8*/
+// root.render(
+//     <React.StrictMode>
+//         <h3>Styled JSXの基本</h3>
+//         <StyledCss />
+//     </React.StrictMode>
+// )
+
+/* 5-2-12*/
 root.render(
     <React.StrictMode>
-        <ProfileBasic />
+        <StyledDynamic theme={{
+            radius: true,
+            color: 'royalblue',
+        }} />
     </React.StrictMode>
 )
