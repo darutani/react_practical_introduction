@@ -59,6 +59,10 @@ import MyButton, {MyStyledButton} from "./chapter5/StyledComp2";
 import StyledCommon from "./chapter5/StyledCommon";
 import GlobalStyle from './chapter5/StyledGlobal';
 import StyledProps from "./chapter5/StyledProps";
+import EmotionJsx from "./chapter5/EmotionJsx";
+import EmotionComp from "./chapter5/EmotionComp";
+/** @jsxImportSource @emotion/react */
+import { css, Global } from '@emotion/react';
 
 
 
@@ -476,8 +480,36 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 5-2-23 */
+// root.render(
+//     <React.StrictMode>
+//         <StyledProps />
+//     </React.StrictMode>
+// )
+
+/* 5-2-25 */
+// root.render(
+//     <React.StrictMode>
+//         <EmotionJsx />
+//     </React.StrictMode>
+// )
+
+/* 5-2-27 */
+// root.render(
+//     <React.StrictMode>
+//         <EmotionComp />
+//     </React.StrictMode>
+// )
+
+/* 5-2-28 */
+const global = css`
+    body {
+        background-color: yellow;
+    }
+`;
+
 root.render(
     <React.StrictMode>
-        <StyledProps />
+        <Global styles={global} />
+        <EmotionJsx />
     </React.StrictMode>
 )
