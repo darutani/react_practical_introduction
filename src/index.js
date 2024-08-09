@@ -45,6 +45,8 @@ import StateTodo from "./chapter4/StateTodo";
 import FormBasic from "./chapter4/FormBasic";
 import FormYup from "./chapter4/Formyup";
 import FormJapan from "./chapter4/FormJapan";
+
+//Chapter5
 import LazyBasic from "./chapter5/LazyBasic";
 import SuspenseSimple from "./chapter5/SuspenseSimple";
 import SuspenseResult from "./chapter5/SuspenseResult";
@@ -52,6 +54,12 @@ import ProfileBasic from "./chapter5/ProfileBasic";
 import StyledBasic from "./chapter5/StyledBasic";
 import StyledCss from "./chapter5/StyledCss";
 import StyledDynamic from "./chapter5/StyledDynamic";
+import StyledComp from "./chapter5/StyledComp";
+import MyButton, {MyStyledButton} from "./chapter5/StyledComp2";
+import StyledCommon from "./chapter5/StyledCommon";
+import GlobalStyle from './chapter5/StyledGlobal';
+import StyledProps from "./chapter5/StyledProps";
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -428,11 +436,48 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 5-2-12*/
+// root.render(
+//     <React.StrictMode>
+//         <StyledDynamic theme={{
+//             radius: true,
+//             color: 'royalblue',
+//         }} />
+//     </React.StrictMode>
+// )
+
+/* 5-2-14 */
+// root.render(
+//     <React.StrictMode>
+//         <StyledComp />
+//     </React.StrictMode>
+// )
+
+/* 5-2-16 */
+// root.render(
+//     <React.StrictMode>
+//         <MyButton>ボタン</MyButton>
+//         <MyStyledButton>ボタン</MyStyledButton>
+//     </React.StrictMode>
+// )
+
+/* 5-2-19 */
+// root.render(
+//     <React.StrictMode>
+//         <StyledCommon />
+//     </React.StrictMode>
+// )
+
+/* 5-2-21 */
+// root.render(
+//     <React.StrictMode>
+//         <GlobalStyle />
+//         <StyledCommon />
+//     </React.StrictMode>
+// )
+
+/* 5-2-23 */
 root.render(
     <React.StrictMode>
-        <StyledDynamic theme={{
-            radius: true,
-            color: 'royalblue',
-        }} />
+        <StyledProps />
     </React.StrictMode>
 )
