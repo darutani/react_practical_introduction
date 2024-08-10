@@ -64,6 +64,9 @@ import EmotionComp from "./chapter5/EmotionComp";
 /** @jsxImportSource @emotion/react */
 import { css, Global } from '@emotion/react';
 import PortalBasic from "./chapter5/PortalBasic";
+import ErrorRoot from "./chapter5/ErrorRoot";
+import ErrorRetryRoot from "./chapter5/ErrorRetryRoot";
+import ErrorEventRoot from "./chapter5/ErrorEventRoot";
 
 
 
@@ -516,9 +519,30 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 5-3-3 */
+// root.render(
+//     <React.StrictMode>
+//         <div id="dialog"></div>
+//         <PortalBasic />
+//     </React.StrictMode>
+// )
+
+/* 5-3-6 */
+// root.render(
+//     <React.StrictMode>
+//         <ErrorRoot />
+//     </React.StrictMode>
+// )
+
+/* 5-3-9 */
+// root.render(
+//     <React.StrictMode>
+//         <ErrorRetryRoot />
+//     </React.StrictMode>
+// )
+
+/* 5-3-9 */
 root.render(
     <React.StrictMode>
-        <div id="dialog"></div>
-        <PortalBasic />
+        <ErrorEventRoot />
     </React.StrictMode>
 )
