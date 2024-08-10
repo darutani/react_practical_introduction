@@ -63,6 +63,7 @@ import EmotionJsx from "./chapter5/EmotionJsx";
 import EmotionComp from "./chapter5/EmotionComp";
 /** @jsxImportSource @emotion/react */
 import { css, Global } from '@emotion/react';
+import PortalBasic from "./chapter5/PortalBasic";
 
 
 
@@ -501,15 +502,23 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 5-2-28 */
-const global = css`
-    body {
-        background-color: yellow;
-    }
-`;
+// const global = css`
+//     body {
+//         background-color: yellow;
+//     }
+// `;
+//
+// root.render(
+//     <React.StrictMode>
+//         <Global styles={global} />
+//         <EmotionJsx />
+//     </React.StrictMode>
+// )
 
+/* 5-3-3 */
 root.render(
     <React.StrictMode>
-        <Global styles={global} />
-        <EmotionJsx />
+        <div id="dialog"></div>
+        <PortalBasic />
     </React.StrictMode>
 )
