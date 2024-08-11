@@ -71,6 +71,7 @@ import ErrorEventRoot from "./chapter5/ErrorEventRoot";
 // Chapter6
 import MaterialBasic from "./chapter6/MaterialBasic";
 import MaterialDrawer from "./chapter6/MaterialDrawer";
+import MaterialGrid from "./chapter6/MaterialGrid";
 
 
 
@@ -559,8 +560,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 6-1-5 */
+// root.render(
+//     <React.StrictMode>
+//         <MaterialDrawer />
+//     </React.StrictMode>
+// )
+
+/* 6-1-6 */
 root.render(
     <React.StrictMode>
-        <MaterialDrawer />
+        <MaterialGrid />
     </React.StrictMode>
 )
