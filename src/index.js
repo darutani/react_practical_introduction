@@ -68,6 +68,9 @@ import ErrorRoot from "./chapter5/ErrorRoot";
 import ErrorRetryRoot from "./chapter5/ErrorRetryRoot";
 import ErrorEventRoot from "./chapter5/ErrorEventRoot";
 
+// Chapter6
+import MaterialBasic from "./chapter6/MaterialBasic";
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -541,8 +544,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 5-3-9 */
+// root.render(
+//     <React.StrictMode>
+//         <ErrorEventRoot />
+//     </React.StrictMode>
+// )
+
+/* 6-1-2 */
 root.render(
     <React.StrictMode>
-        <ErrorEventRoot />
+        <MaterialBasic />
     </React.StrictMode>
 )
