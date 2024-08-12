@@ -72,6 +72,8 @@ import ErrorEventRoot from "./chapter5/ErrorEventRoot";
 import MaterialBasic from "./chapter6/MaterialBasic";
 import MaterialDrawer from "./chapter6/MaterialDrawer";
 import MaterialGrid from "./chapter6/MaterialGrid";
+import {CssBaseline, ThemeProvider} from "@mui/material";
+import theme from './chapter6/theme.js'
 
 
 
@@ -567,8 +569,18 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 6-1-6 */
+// root.render(
+//     <React.StrictMode>
+//         <MaterialGrid />
+//     </React.StrictMode>
+// )
+
+/* 6-1-10 */
 root.render(
     <React.StrictMode>
-        <MaterialGrid />
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <MaterialBasic />
+        </ThemeProvider>
     </React.StrictMode>
 )

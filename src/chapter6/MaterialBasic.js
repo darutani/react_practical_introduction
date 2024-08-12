@@ -8,7 +8,7 @@ export default function MaterialBasic() {
     `;
     return (
         <>
-            <Button variant="text" color="secondary" css={font}>Text</Button>
+            <Button variant="text" color="primary" css={font}>Text</Button>
             <Button variant="contained" color="secondary" css={font}>Contained</Button>
             <Button variant="outlined" color="secondary" css={font}>Outlined</Button>
         </>
