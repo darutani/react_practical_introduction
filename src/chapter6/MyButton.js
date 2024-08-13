@@ -1,5 +1,6 @@
 import '../stories/button.css';
 import React from 'react';
+import PropTypes from "prop-types";
 
 export default function MyButton({
     primary = false,
@@ -23,3 +24,27 @@ export default function MyButton({
         </button>
     );
 };
+
+// Propsの型情報を宣言
+MyButton.propTypes = {
+    /**
+     * Primaryカラーを有効にするか
+     */
+    primary: PropTypes.bool,
+    /**
+     * 背景色
+     */
+    backgroundColor: PropTypes.string,
+    /**
+     * ボタンの大きさ
+     */
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    /**
+     * ボタンのキャプション
+     */
+    label: PropTypes.string.isRequired,
+    /**
+     * clickハンドラー
+     */
+    onClick: PropTypes.func,
+}
