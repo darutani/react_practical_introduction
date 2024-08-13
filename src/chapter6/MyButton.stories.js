@@ -1,5 +1,6 @@
 import MyButton from "./MyButton";
 import React from 'react';
+import {action} from "@storybook/addon-actions";
 
 export default {
     title: 'MyApp/MyButton',
@@ -25,11 +26,11 @@ export default {
             type: 'string',
             description: 'ボタンのキャプション',
         },
-        onClick: {
-            type: 'function',
-            description: 'clickハンドラー',
-        },
-
+        // onClick: {
+        //     type: 'function',
+        //     description: 'clickハンドラー',
+        // },
+        // handleClick: { action: 'clicked' }
     }
 };
 
@@ -55,6 +56,10 @@ export const White = {
         size: 'small',
         label: 'ボタン',
         backgroundColor: '#fff',
+        // handleClick: action('clicked'),
+        handleClick: e => {
+            action('clicked')(e, new Date());
+        }
     }
 };
 

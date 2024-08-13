@@ -7,6 +7,7 @@ export default function MyButton({
     backgroundColor = null,
     size = 'medium',
     label = 'Button',
+    handleClick,
     ...props
 }) {
     const mode = primary
@@ -18,6 +19,7 @@ export default function MyButton({
             type="button"
             className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
             style={backgroundColor && { backgroundColor }}
+            onClick={handleClick}
             {...props}
         >
             {label}
@@ -46,5 +48,5 @@ MyButton.propTypes = {
     /**
      * clickハンドラー
      */
-    onClick: PropTypes.func,
+    handleClick: PropTypes.func,
 }
