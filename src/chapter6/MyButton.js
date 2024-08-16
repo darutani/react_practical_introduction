@@ -1,7 +1,9 @@
 import '../stories/button.css';
-import React from 'react';
 import PropTypes from "prop-types";
 
+/**
+ * 属性の設定に応じて種々のボタンを生成
+ */
 export default function MyButton({
     primary = false,
     backgroundColor = null,
@@ -48,5 +50,6 @@ MyButton.propTypes = {
     /**
      * clickハンドラー
      */
+    // onClick: PropTypes.func,
     handleClick: PropTypes.func,
 }
