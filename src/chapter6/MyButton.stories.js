@@ -55,6 +55,7 @@ export default {
     //         </div>
     //     ),
     // ],
+    // tags: ['autodocs'],
 };
 
 export const Index = {
