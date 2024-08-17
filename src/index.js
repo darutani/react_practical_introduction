@@ -81,6 +81,7 @@ import {QueryClient, QueryClientProvider} from "react-query";
 import QueryBasic from "./chapter6/QueryBasic";
 import {ErrorBoundary} from "react-error-boundary";
 import QuerySuspense from "./chapter6/QuerySuspense";
+import StateEffect from "./chapter7/StateEffect";
 
 
 
@@ -624,22 +625,29 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 6-3-6 */
-const cli = new QueryClient({
-    defaultOptions: {
-        queries: {
-            suspense: true,
-        }
-    }
-});
+// const cli = new QueryClient({
+//     defaultOptions: {
+//         queries: {
+//             suspense: true,
+//         }
+//     }
+// });
+//
+// root.render(
+//     <React.StrictMode>
+//         <Suspense fallback={<p>Loading...</p>}>
+//             <ErrorBoundary fallback={<div>エラーが発生しました。</div>}>
+//                 <QueryClientProvider client={cli}>
+//                     <QuerySuspense />
+//                 </QueryClientProvider>
+//             </ErrorBoundary>
+//         </Suspense>
+//     </React.StrictMode>
+// )
 
+/* 7-1-2 */
 root.render(
     <React.StrictMode>
-        <Suspense fallback={<p>Loading...</p>}>
-            <ErrorBoundary fallback={<div>エラーが発生しました。</div>}>
-                <QueryClientProvider client={cli}>
-                    <QuerySuspense />
-                </QueryClientProvider>
-            </ErrorBoundary>
-        </Suspense>
+        <StateEffect init={0} />
     </React.StrictMode>
 )
