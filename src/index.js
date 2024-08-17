@@ -77,6 +77,8 @@ import theme from './chapter6/theme.js'
 import MaterialMode from "./chapter6/MaterialMode";
 import FormMui from "./chapter6/FormMUI";
 import QueryPre from "./chapter6/QueryPre";
+import {QueryClient, QueryClientProvider} from "react-query";
+import QueryBasic from "./chapter6/QueryBasic";
 
 
 
@@ -603,8 +605,18 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 6-3-2 */
+// root.render(
+//     <React.StrictMode>
+//         <QueryPre />
+//     </React.StrictMode>
+// )
+
+/* 6-3-4 */
+const cli = new QueryClient();
 root.render(
     <React.StrictMode>
-        <QueryPre />
+        <QueryClientProvider client={cli}>
+            <QueryBasic />
+        </QueryClientProvider>
     </React.StrictMode>
 )
