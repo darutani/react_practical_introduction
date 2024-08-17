@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -79,6 +79,8 @@ import FormMui from "./chapter6/FormMUI";
 import QueryPre from "./chapter6/QueryPre";
 import {QueryClient, QueryClientProvider} from "react-query";
 import QueryBasic from "./chapter6/QueryBasic";
+import {ErrorBoundary} from "react-error-boundary";
+import QuerySuspense from "./chapter6/QuerySuspense";
 
 
 
@@ -612,11 +614,32 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 6-3-4 */
-const cli = new QueryClient();
+// const cli = new QueryClient();
+// root.render(
+//     <React.StrictMode>
+//         <QueryClientProvider client={cli}>
+//             <QueryBasic />
+//         </QueryClientProvider>
+//     </React.StrictMode>
+// )
+
+/* 6-3-6 */
+const cli = new QueryClient({
+    defaultOptions: {
+        queries: {
+            suspense: true,
+        }
+    }
+});
+
 root.render(
     <React.StrictMode>
-        <QueryClientProvider client={cli}>
-            <QueryBasic />
-        </QueryClientProvider>
+        <Suspense fallback={<p>Loading...</p>}>
+            <ErrorBoundary fallback={<div>エラーが発生しました。</div>}>
+                <QueryClientProvider client={cli}>
+                    <QuerySuspense />
+                </QueryClientProvider>
+            </ErrorBoundary>
+        </Suspense>
     </React.StrictMode>
 )
