@@ -152,6 +152,14 @@
     ],
     "resetMocks": true
   },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      "styled-jsx/babel"
+    ]
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.25.3",
     "@babel/preset-react": "^7.24.7",
