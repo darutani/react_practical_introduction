@@ -76,6 +76,7 @@ import {CssBaseline, ThemeProvider} from "@mui/material";
 import theme from './chapter6/theme.js'
 import MaterialMode from "./chapter6/MaterialMode";
 import FormMui from "./chapter6/FormMUI";
+import QueryPre from "./chapter6/QueryPre";
 
 
 
@@ -125,7 +126,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //     </React.StrictMode>
 // )
 
-/* cahpter3-2-7 */
+/* chapter3-2-7 */
 // root.render(
 //     <React.StrictMode>
 //         <ForNest src={books} />
@@ -595,8 +596,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 6-1-15 */
+// root.render(
+//     <React.StrictMode>
+//         <FormMui />
+//     </React.StrictMode>
+// )
+
+/* 6-3-2 */
 root.render(
     <React.StrictMode>
-        <FormMui />
+        <QueryPre />
     </React.StrictMode>
 )
