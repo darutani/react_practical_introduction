@@ -86,6 +86,9 @@ import QuerySuspense from "./chapter6/QuerySuspense";
 import StateEffect from "./chapter7/StateEffect";
 import HookTimer from "./chapter7/HookTimer";
 import HookEffect from "./chapter7/HookEffect";
+import HookRefNg from "./chapter7/HookRefNg";
+import HookRef from "./chapter7/HookRef";
+import HookRefForward from "./chapter7/HookRefForward";
 
 
 
@@ -664,8 +667,29 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 7-1-7 */
+// root.render(
+//     <React.StrictMode>
+//         <HookEffect init={10} />
+//     </React.StrictMode>
+// )
+
+/* 7-2-2 */
+// root.render(
+//     <React.StrictMode>
+//         <HookRefNg />
+//     </React.StrictMode>
+// )
+
+/* 7-2-4 */
+// root.render(
+//     <React.StrictMode>
+//         <HookRef />
+//     </React.StrictMode>
+// )
+
+/* 7-2-7 */
 root.render(
     <React.StrictMode>
-        <HookEffect init={10} />
+        <HookRefForward />
     </React.StrictMode>
 )
