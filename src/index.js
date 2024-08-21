@@ -91,6 +91,7 @@ import HookRef from "./chapter7/HookRef";
 import HookRefForward from "./chapter7/HookRefForward";
 import HookCallbackRef from "./chapter7/HookCallbackRef";
 import HookReducer from "./chapter7/HookReducer";
+import HookReducerUp from "./chapter7/HookReducerUp";
 
 
 
@@ -704,8 +705,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 7-3-2 */
+// root.render(
+//     <React.StrictMode>
+//         <HookReducer init={0} />
+//     </React.StrictMode>
+// )
+
+/* 7-3-4 */
 root.render(
     <React.StrictMode>
-        <HookReducer init={0} />
+        <HookReducerUp init={0} />
     </React.StrictMode>
 )
