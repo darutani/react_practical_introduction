@@ -96,6 +96,8 @@ import HookReducerInit from "./chapter7/HookReducerInit";
 import HookContext from "./chapter7/HookContext";
 import MyThemeProvider from "./chapter7/MyThemeProvider";
 import HookThemeButton from "./chapter7/HookThemeButton";
+import {RecoilRoot} from "recoil";
+import RecoilCounter from "./chapter7/RecoilCounter";
 
 
 
@@ -737,10 +739,19 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 7-4-6 */
+// root.render(
+//     <React.StrictMode>
+//         <MyThemeProvider>
+//             <HookThemeButton />
+//         </MyThemeProvider>
+//     </React.StrictMode>
+// )
+
+/* 7-5-3 */
 root.render(
     <React.StrictMode>
-        <MyThemeProvider>
-            <HookThemeButton />
-        </MyThemeProvider>
+        <RecoilRoot>
+            <RecoilCounter />
+        </RecoilRoot>
     </React.StrictMode>
 )
