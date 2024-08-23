@@ -98,6 +98,7 @@ import MyThemeProvider from "./chapter7/MyThemeProvider";
 import HookThemeButton from "./chapter7/HookThemeButton";
 import {RecoilRoot} from "recoil";
 import RecoilCounter from "./chapter7/RecoilCounter";
+import RecoilTodo from "./chapter7/RecoilTodo";
 
 
 
@@ -748,10 +749,19 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 7-5-3 */
+// root.render(
+//     <React.StrictMode>
+//         <RecoilRoot>
+//             <RecoilCounter />
+//         </RecoilRoot>
+//     </React.StrictMode>
+// )
+
+/* 7-5-6 */
 root.render(
     <React.StrictMode>
         <RecoilRoot>
-            <RecoilCounter />
+            <RecoilTodo />
         </RecoilRoot>
     </React.StrictMode>
 )
