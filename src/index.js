@@ -101,6 +101,7 @@ import RecoilCounter from "./chapter7/RecoilCounter";
 import RecoilTodo from "./chapter7/RecoilTodo";
 import RecoilTodoUp from "./chapter7/RecoilTodoUp";
 import HookMemo from "./chapter7/HookMemo";
+import HookTransition from "./chapter7/HookTransition";
 
 
 
@@ -778,8 +779,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 7-6-3 */
+// root.render(
+//     <React.StrictMode>
+//         <HookMemo />
+//     </React.StrictMode>
+// )
+
+/* 7-7-3 */
 root.render(
     <React.StrictMode>
-        <HookMemo />
+        <HookTransition />
     </React.StrictMode>
 )
