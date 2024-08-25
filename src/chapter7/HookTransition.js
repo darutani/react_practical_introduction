@@ -28,7 +28,7 @@ export default function () {
             </select>
             <BookDetails isbn={isbn} />
             <hr />
-            <CommentList src={comments}/>
+            <CommentList src={comments} isPending={isPending}/>
         </>
     );
 }
