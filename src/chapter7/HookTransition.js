@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useTransition} from "react";
 import commentList from './comments';
 import books from './books.js';
 import {BookDetails, CommentList} from "./HookTransitionChild";
@@ -6,11 +6,14 @@ import {BookDetails, CommentList} from "./HookTransitionChild";
 export default function () {
     const [isbn, setIsbn] = useState('');
     const [comments, setComments] = useState([]);
+    const [isPending, startTransition] = useTransition();
 
     const handleChange = e => {
         const isbn = e.target.value;
         setIsbn(isbn);
-        setComments(commentList.filter(c => c.isbn === isbn))
+        startTransition(() => {
+            setComments(commentList.filter(c => c.isbn === isbn))
+        });
     };
 
     return (
