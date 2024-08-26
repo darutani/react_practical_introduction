@@ -1,19 +1,18 @@
-import {useState, useTransition} from "react";
+import {useDeferredValue, useState, useTransition} from "react";
 import commentList from './comments';
 import books from './books.js';
 import {BookDetails, CommentList} from "./HookTransitionChild";
 
-export default function HookTransition() {
+export default function HookDeferredTransition() {
     const [isbn, setIsbn] = useState('');
     const [comments, setComments] = useState([]);
-    const [isPending, startTransition] = useTransition();
+    const deferredComments = useDeferredValue(comments);
+    const isPending = comments !== deferredComments;
 
     const handleChange = e => {
         const isbn = e.target.value;
         setIsbn(isbn);
-        startTransition(() => {
-            setComments(commentList.filter(c => c.isbn === isbn))
-        });
+        setComments(commentList.filter(c => c.isbn === isbn));
     };
 
     return (

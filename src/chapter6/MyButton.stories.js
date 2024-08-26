@@ -47,7 +47,7 @@ export default {
     //         <div style={{
     //             height: 150,
     //             display: 'flex',
-    //             justifyContent: 'center',
+    //学校等教育機関             justifyContent: 'center',
     //             alignItems: 'center',
     //             backgroundColor: '#ccc',
     //         }}>

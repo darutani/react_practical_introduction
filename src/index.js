@@ -102,6 +102,9 @@ import RecoilTodo from "./chapter7/RecoilTodo";
 import RecoilTodoUp from "./chapter7/RecoilTodoUp";
 import HookMemo from "./chapter7/HookMemo";
 import HookTransition from "./chapter7/HookTransition";
+import HookDeferred from "./chapter7/HookDeferred";
+import HookDeferredTransition from "./chapter7/HookDeferredTransition";
+import HookCustom from "./chapter7/HookCustom";
 
 
 
@@ -786,8 +789,29 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 7-7-3 */
+// root.render(
+//     <React.StrictMode>
+//         <HookTransition />
+//     </React.StrictMode>
+// )
+
+/* 7-7-8 */
+// root.render(
+//     <React.StrictMode>
+//         <HookDeferred />
+//     </React.StrictMode>
+// )
+
+/* 7-7-10 */
+// root.render(
+//     <React.StrictMode>
+//         <HookDeferredTransition />
+//     </React.StrictMode>
+// )
+
+/* 7-8-3 */
 root.render(
     <React.StrictMode>
-        <HookTransition />
+        <HookCustom />
     </React.StrictMode>
 )
