@@ -109,6 +109,7 @@ import HookCustom from "./chapter7/HookCustom";
 // Chapter8
 import {RouterProvider} from "react-router-dom";
 import routesBasic from "./chapter8/routesBasic";
+import routesLink from "./chapter8/routesLink";
 
 
 
@@ -821,8 +822,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 8-1-2 */
+// root.render(
+//     <React.StrictMode>
+//         <RouterProvider router={routesBasic} />
+//     </React.StrictMode>
+// )
+
+/* 8-2-3 */
 root.render(
     <React.StrictMode>
-        <RouterProvider router={routesBasic} />
+        <RouterProvider router={routesLink} />
     </React.StrictMode>
 )
