@@ -82,7 +82,7 @@ import QueryBasic from "./chapter6/QueryBasic";
 import {ErrorBoundary} from "react-error-boundary";
 import QuerySuspense from "./chapter6/QuerySuspense";
 
-//Chapter7
+// Chapter7
 import StateEffect from "./chapter7/StateEffect";
 import HookTimer from "./chapter7/HookTimer";
 import HookEffect from "./chapter7/HookEffect";
@@ -105,6 +105,10 @@ import HookTransition from "./chapter7/HookTransition";
 import HookDeferred from "./chapter7/HookDeferred";
 import HookDeferredTransition from "./chapter7/HookDeferredTransition";
 import HookCustom from "./chapter7/HookCustom";
+
+// Chapter8
+import {RouterProvider} from "react-router-dom";
+import routesBasic from "./chapter8/routesBasic";
 
 
 
@@ -810,8 +814,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 7-8-3 */
+// root.render(
+//     <React.StrictMode>
+//         <HookCustom />
+//     </React.StrictMode>
+// )
+
+/* 8-1-2 */
 root.render(
     <React.StrictMode>
-        <HookCustom />
+        <RouterProvider router={routesBasic} />
     </React.StrictMode>
 )
