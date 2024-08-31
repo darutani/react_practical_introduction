@@ -111,6 +111,8 @@ import {RouterProvider} from "react-router-dom";
 import routesBasic from "./chapter8/routesBasic";
 import routesLink from "./chapter8/routesLink";
 import routesParam from "./chapter8/routesParam";
+import routesHandle from "./chapter8/routesHandle";
+import {HelmetProvider} from "react-helmet-async";
 
 
 
@@ -837,8 +839,17 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 8-3-2 */
+// root.render(
+//     // <React.StrictMode>
+//         <RouterProvider router={routesParam} />
+//     // </React.StrictMode>
+// )
+
+/* 8-3-2 */
 root.render(
     <React.StrictMode>
-        <RouterProvider router={routesParam} />
+        <HelmetProvider>
+            <RouterProvider router={routesHandle} />
+        </HelmetProvider>
     </React.StrictMode>
 )
