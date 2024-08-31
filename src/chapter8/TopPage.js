@@ -13,11 +13,4 @@ export default function TopPage() {
         <p>トップページです。</p>
       </>
   );
-
-  // return (
-  //   <>
-  //     <MyHeader />
-  //     <p>トップページです。</p>
-  //   </>
-  // );
 }

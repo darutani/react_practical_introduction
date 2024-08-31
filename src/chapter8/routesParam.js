@@ -6,10 +6,11 @@ import SearchPage from "./SearchPage";
 import NotFoundPage from "./NotFoundPage";
 import BigQueryPage from "./BigQueryPage";
 import BookStatePage from "./BookStatePage";
+import InvalidParamsPage from "./InvalidParamsPage";
 
 const routesParam = createBrowserRouter(
     createRoutesFromElements(
-        <Route element={<RouterParams />}>
+        <Route element={<RouterParams />} errorElement={<InvalidParamsPage />}>
             <Route path="/" element={<TopPage />} />
             <Route path="/book/:isbn?" element={<BookPage />} />
             <Route path="/bookQuery" element={<BigQueryPage />} />
