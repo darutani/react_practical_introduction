@@ -10,7 +10,10 @@ import InvalidParamsPage from "./InvalidParamsPage";
 import WeatherPage from "./WeatherPage";
 import CommonErrorPage from "./CommonErrorPage";
 
+const sleep = ms => new Promise(res => setTimeout(res, ms));
+
 const fetchWeather = async ({ params }) => {
+    await sleep(2000);
     const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${params.city}&lang=ja&appid=50eee5976b25f93049deb7fd5d14e6bd`)
     if (res.ok) { return res; }
     // return json({

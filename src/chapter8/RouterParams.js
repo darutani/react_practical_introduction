@@ -1,8 +1,9 @@
-import {NavLink, Outlet} from "react-router-dom";
+import {NavLink, Outlet, useNavigation} from "react-router-dom";
 import {useState} from "react";
 
 export default function RouterParams() {
     const [count, setCount] = useState(0);
+    const navigation = useNavigation();
 
     return (
         <>
@@ -19,7 +20,12 @@ export default function RouterParams() {
                 <li><NavLink to="/nothing/foo/bar">存在しないページ</NavLink></li>
             </ul>
             <hr />
-            <Outlet context={[count, setCount]} />
+            {/*<Outlet context={[count, setCount]} />*/}
+            {
+                navigation.state === 'loading'
+                    ? <p>Loading...</p>
+                    : <Outlet context={[count, setCount]} />
+            }
         </>
     );
 }
