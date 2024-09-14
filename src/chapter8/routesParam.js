@@ -7,6 +7,7 @@ import NotFoundPage from "./NotFoundPage";
 import BigQueryPage from "./BigQueryPage";
 import BookStatePage from "./BookStatePage";
 import InvalidParamsPage from "./InvalidParamsPage";
+import WeatherPage from "./WeatherPage";
 
 const routesParam = createBrowserRouter(
     createRoutesFromElements(
@@ -16,6 +17,11 @@ const routesParam = createBrowserRouter(
             <Route path="/bookQuery" element={<BigQueryPage />} />
             <Route path="/bookState" element={<BookStatePage />} />
             <Route path="/search/*" element={<SearchPage />} />
+            <Route path="/weather/:city" element={<WeatherPage />}
+                loader={({ params}) =>
+                    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${params.city}&lang=ja&appid=50eee5976b25f93049deb7fd5d14e6bd`)
+                }
+            />
             <Route path="*" element={<NotFoundPage />} />
         </Route>
     )

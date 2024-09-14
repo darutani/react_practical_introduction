@@ -9,7 +9,7 @@ export default function TopPage() {
 
   return (
       <>
-        <MyHeader />
+        {/*<MyHeader />*/}
         <p>トップページです。</p>
       </>
   );
