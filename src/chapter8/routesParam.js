@@ -68,9 +68,10 @@ const routesParam = createBrowserRouter(
             <Route path="/bookQuery" element={<BigQueryPage />} />
             <Route path="/bookState" element={<BookStatePage />} />
             <Route path="/search/*" element={<SearchPage />} />
-            <Route path="/weather/:city" element={<WeatherPage />}
-                loader={fetchWeather}
-            />
+            {/*<Route path="/weather/:city" element={<WeatherPage />}*/}
+            {/*    loader={fetchWeather}*/}
+            {/*/>*/}
+            <Route path="/weather/:city" lazy={() => import('./WeatherLazyPage')} />
             <Route path="*" element={<NotFoundPage />} />
         </Route>
     )
