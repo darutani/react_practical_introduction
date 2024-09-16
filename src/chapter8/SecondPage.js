@@ -6,7 +6,7 @@ export default function SecondPage() {
             <h2>SecondPage</h2>
             <hr />
             <p style={{ height: 800 }}></p>
-            <p><Link to="/second">Firstページへ</Link></p>
+            <p><Link to="/">Firstページへ</Link></p>
         </>
     );
 }
