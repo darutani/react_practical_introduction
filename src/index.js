@@ -114,6 +114,7 @@ import routesParam from "./chapter8/routesParam";
 import routesHandle from "./chapter8/routesHandle";
 import {HelmetProvider} from "react-helmet-async";
 import routesMyLink from "./chapter8/routesMyLink";
+import routesScroll from "./chapter8/routesScroll";
 
 
 
@@ -855,8 +856,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //     </React.StrictMode>
 // )
 
-
 /* 8-5-4 */
+// root.render(
+//     <RouterProvider router={routesMyLink} />
+// )
+
+/* 8-5-8 */
 root.render(
-    <RouterProvider router={routesMyLink} />
+    <RouterProvider router={routesScroll} />
 )
