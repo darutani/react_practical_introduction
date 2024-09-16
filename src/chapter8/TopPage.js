@@ -4,8 +4,8 @@ import MyHeader from "./MyHeader";
 // import MyHeader from './MyHeader';
 
 export default function TopPage() {
-  const [, setCount] = useOutletContext();
-  useEffect(() => setCount(c => c + 1), [setCount]);
+  // const [, setCount] = useOutletContext();
+  // useEffect(() => setCount(c => c + 1), [setCount]);
 
   return (
       <>

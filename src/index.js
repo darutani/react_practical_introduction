@@ -113,6 +113,7 @@ import routesLink from "./chapter8/routesLink";
 import routesParam from "./chapter8/routesParam";
 import routesHandle from "./chapter8/routesHandle";
 import {HelmetProvider} from "react-helmet-async";
+import routesMyLink from "./chapter8/routesMyLink";
 
 
 
@@ -839,11 +840,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 8-3-2 */
-root.render(
-    // <React.StrictMode>
-        <RouterProvider router={routesParam} />
-    // </React.StrictMode>
-)
+// root.render(
+//     // <React.StrictMode>
+//         <RouterProvider router={routesParam} />
+//     // </React.StrictMode>
+// )
 
 /* 8-3-6 */
 // root.render(
@@ -853,3 +854,9 @@ root.render(
 //         </HelmetProvider>
 //     </React.StrictMode>
 // )
+
+
+/* 8-5-4 */
+root.render(
+    <RouterProvider router={routesMyLink} />
+)
