@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
 const fetchWeather = async () => {
     await sleep(2000);
-    const res = await fetch('https://api.openweathermap.org/data/2.5/weather?q=HogeHoge&appid=50eee5976b25f93049deb7fd5d14e6bd');
+    const res = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=50eee5976b25f93049deb7fd5d14e6bd');
     if (res.ok) { return res.json(); }
     throw new Error(res.statusText);
 };
