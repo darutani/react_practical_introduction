@@ -1,7 +1,7 @@
 import React from "react";
-import {ForItem} from "./ForItem";
+import ForItem from "./ForItem";
 
-export function ForNest({ src }) {
+export default function ForNest({ src }) {
     return (
         <dl>
             {
