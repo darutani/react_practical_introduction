@@ -86,7 +86,9 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome"
   },
   "eslintConfig": {
     "extends": [
@@ -171,6 +173,7 @@
     "@chromatic-com/storybook": "^1.6.1",
     "@storybook/addon-viewport": "^7.6.20",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "cypress": "^13.14.2",
     "eslint-plugin-storybook": "^0.8.0",
     "storybook": "^7.0.18"
   }

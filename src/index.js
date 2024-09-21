@@ -841,11 +841,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 8-3-2 */
-// root.render(
-//     // <React.StrictMode>
-//         <RouterProvider router={routesParam} />
-//     // </React.StrictMode>
-// )
+root.render(
+    // <React.StrictMode>
+        <RouterProvider router={routesParam} />
+    // </React.StrictMode>
+)
 
 /* 8-3-6 */
 // root.render(
@@ -862,6 +862,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 /* 8-5-8 */
-root.render(
-    <RouterProvider router={routesScroll} />
-)
+// root.render(
+//     <RouterProvider router={routesScroll} />
+// )
