@@ -10,6 +10,7 @@ import books from "./books"
 import {Book} from "./Book";
 import MyThemeProvider from "./MyThemeProvider";
 import HookThemeButton from "./HookThemeButton";
+import HookReducerUp from "./HookReducerUp";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -58,11 +59,18 @@ const root = ReactDOM.createRoot(
 // )
 
 /* 10-2-9 */
+// root.render(
+//     <React.StrictMode>
+//         <MyThemeProvider>
+//             <HookThemeButton />
+//         </MyThemeProvider>
+//     </React.StrictMode>
+// )
+
+/* 10-2-12 */
 root.render(
     <React.StrictMode>
-        <MyThemeProvider>
-            <HookThemeButton />
-        </MyThemeProvider>
+        <HookReducerUp init={0} />
     </React.StrictMode>
 )
 
