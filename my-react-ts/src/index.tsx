@@ -11,6 +11,7 @@ import {Book} from "./Book";
 import MyThemeProvider from "./MyThemeProvider";
 import HookThemeButton from "./HookThemeButton";
 import HookReducerUp from "./HookReducerUp";
+import StateFormUc from "./StateFormUc";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -68,9 +69,16 @@ const root = ReactDOM.createRoot(
 // )
 
 /* 10-2-12 */
+// root.render(
+//     <React.StrictMode>
+//         <HookReducerUp init={0} />
+//     </React.StrictMode>
+// )
+
+/* 10-2-13 */
 root.render(
     <React.StrictMode>
-        <HookReducerUp init={0} />
+        <StateFormUc />
     </React.StrictMode>
 )
 
