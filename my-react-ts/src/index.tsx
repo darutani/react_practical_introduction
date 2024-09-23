@@ -12,6 +12,7 @@ import MyThemeProvider from "./MyThemeProvider";
 import HookThemeButton from "./HookThemeButton";
 import HookReducerUp from "./HookReducerUp";
 import StateFormUc from "./StateFormUc";
+import QueryPre from "./QueryPre";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -76,9 +77,16 @@ const root = ReactDOM.createRoot(
 // )
 
 /* 10-2-13 */
+// root.render(
+//     <React.StrictMode>
+//         <StateFormUc />
+//     </React.StrictMode>
+// )
+
+/* 10-2-14 */
 root.render(
     <React.StrictMode>
-        <StateFormUc />
+        <QueryPre />
     </React.StrictMode>
 )
 
