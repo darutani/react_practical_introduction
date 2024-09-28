@@ -16,11 +16,11 @@ export function createBook(book) {
     return {
         id: book.id,
         title: book.volumeInfo.title,
-        author: authors ? authors.join() : '',
+        author: authors ? authors.join(',') : '',
         price: price ? price.amount : 0,
         publisher: book.volumeInfo.publisher,
         published: book.volumeInfo.publishedDate,
-        image: img ? img.smallThumnail : '/vercel.svg'
+        image: img ? img.smallThumbnail : '/vercel.svg'
     };
 }
 
@@ -33,4 +33,19 @@ export async function getBookByKeyword(keyword) {
     }
 
     return books;
+}
+
+export async function getBookById(id) {
+    const res = await fetch(`https://www.googleapis.com/books/v1/volumes/${id}`);
+    const result = await res.json();
+
+    return createBook(result);
+}
+
+export async function getReviewById(id) {
+    return await prisma.reviews.findUnique({
+        where: {
+            id: id
+        }
+    });
 }
